@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Jun 04 2018 18:01:04 GMT+0900">
-        <meta property="article:modified_time" content="Wed Jun 06 2018 13:44:19 GMT+0900">
+        <meta property="article:modified_time" content="Thu Jun 07 2018 15:12:45 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://eickee.com/2018/06/04/myblog/index.html",
     "headline": "关于blog的blablabla",
     "datePublished": "Mon Jun 04 2018 18:01:04 GMT+0900",
-    "dateModified": "Wed Jun 06 2018 13:44:19 GMT+0900",
+    "dateModified": "Thu Jun 07 2018 15:12:45 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "eickEe",
@@ -494,6 +494,35 @@
                 <!-- Post Comments -->
                 
                     
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '',
+            clientSecret: '',
+            repo: '',
+            owner: '',
+            admin: [''],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
                 
             </div>
 
@@ -790,6 +819,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+   <!-- GitTalk -->
 
 
 
