@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+        <link rel="dns-prefetch" href="https://cdn-city.livere.com"/>
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            第一章 Machine Learning基础 | 
+        
+        eickEe
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/titt.png">
+    <link rel="icon" href="/img/titt.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",基础概念,Machine Learning,ML分类">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #4586F3 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #4586F3 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #4586F3 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #fff;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="eickEe">
+    <meta name="msapplication-starturl" content="http://eickee.com/2018/06/09/ml_chapter1/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="eickEe">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/titt.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://eickee.com/2018/06/09/ml_chapter1/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="第一章 Machine Learning基础 | eickEe">
+    <meta property="og:image" content="/img/titt.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="基础概念"> <meta property="og:article:tag" content="Machine Learning"> <meta property="og:article:tag" content="ML分类"> 
+
+    
+        <meta property="article:published_time" content="Sat Jun 09 2018 20:03:56 GMT+0900">
+        <meta property="article:modified_time" content="Mon Jun 18 2018 18:21:09 GMT+0900">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://eickee.com/2018/06/09/ml_chapter1/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://eickee.com/2018/06/09/ml_chapter1/index.html",
+    "headline": "第一章 Machine Learning基础",
+    "datePublished": "Sat Jun 09 2018 20:03:56 GMT+0900",
+    "dateModified": "Mon Jun 18 2018 18:21:09 GMT+0900",
+    "author": {
+        "@type": "Person",
+        "name": "eickEe",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/selfie5.jpg"
+        },
+        "description": "果粉，科密，锤黑."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "eickEe",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/titt.png"
+        }
+    },
+    "keywords": ",基础概念,Machine Learning,ML分类",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Definition-amp-Why"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Definition &amp;Why</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-Types-of-Machine-Learning-Systems"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. Types of Machine Learning Systems</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-根据人类的supervision"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1. 根据人类的supervision</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Supervised-Learning"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Supervised Learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Unsupervised-learning"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Unsupervised learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Semisupervised-learning"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">Semisupervised learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reinforcement-learning"><span class="post-toc-number">2.1.4.</span> <span class="post-toc-text">Reinforcement learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-根据输入数据是fed-by-batch还是online"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2. 根据输入数据是fed by batch还是online</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Batch-learning-offline-learning"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">Batch learning(offline learning)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Online-learning"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Online learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-根据模型的工作方式-instance-model-based"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3. 根据模型的工作方式 instance/model based</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Instance-based-learning"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">Instance-based learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Model-based-learning"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">Model-based learning</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-ML中会遇得到种种问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. ML中会遇得到种种问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-Insufficient-Quantity-of-Training-Data"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1. Insufficient Quantity of Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-Non-representative-Training-Data"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2. Non-representative Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-Poor-Quality-Training-Data"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.3. Poor-Quality Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-Irrelevant-Features"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">3.4. Irrelevant Features</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-Overfitting-training-data"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">3.5. Overfitting training data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-Underfitting-the-training-Data"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">3.6. Underfitting the training Data</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Testing-amp-Validating"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. Testing &amp;Validating</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-唠叨一下"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 唠叨一下</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/chapter1/post1.jpg)">
+    
+            <p class="article-headline-p">
+                第一章 Machine Learning基础
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/selfie5.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>eickEe</strong>
+        <span>6月 09, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ML分类/">ML分类</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/基础概念/">基础概念</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=第一章 Machine Learning基础&url=http://eickee.com/2018/06/09/ml_chapter1/index.html&pic=http://eickee.com/img/titt.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=第一章 Machine Learning基础&url=http://eickee.com/2018/06/09/ml_chapter1/index.html&via=eickEe" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://eickee.com/2018/06/09/ml_chapter1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://eickee.com/2018/06/09/ml_chapter1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>哎，打脸了，第一篇就拖了一个星期，结果数据挖掘好像考的也不咋地，哭一会儿。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529322415583&di=c3f54b957d9f3161cc3adef03d59ba70&imgtype=0&src=http%3A%2F%2Fgfs12.gomein.net.cn%2FL1y9VgB7AT1RCvBVdK.gif" width="200" hegiht="100" align="center"><br>进入正题。</p>
+<p>AI是近些年最火热的话题之一，而Machine Learning则在整个AI领域中占据着举足轻重的地位（尤其Deep Learning得到了飞跃发展的今天）。抛开大家在游戏（比如最近大红的底特律）又或影视中看到的非常概念性的AI产品（西部世界等），就近来看，Machine Learning在现在的科技产品中也扮演着越来越重要的角色，比如人脸识别，比如推荐系统等等。就我个人的想法，当这些特别的个体部分得到充分性的整合后，得到的必然将是颠覆性的产品概念（例如，已经步步走向成熟的智能驾驶系统）。<br>这一章，主要内容包括Machine Learning的定义，分类等大的概念，以及一些我对机器学习这方面自己的理解。（接下来统称ML）</p>
+<h2 id="1-Definition-amp-Why"><a href="#1-Definition-amp-Why" class="headerlink" title="1. Definition &amp;Why"></a>1. Definition &amp;Why</h2><p>书中引用的是Tom Mitchell（1997）对ML的定义：</p>
+<p><em>A computer program is said ot learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</em></p>
+<div align="center"><br><img src="/img/chapter1/ML_struc.png" width="400" hegiht="200" align="center"><br></div>
+
+<p>一个简单的例子是，我们要做一个垃圾邮件的分类（T）模型，通过这个模型进行分类得到类别（是否为spam）P，我们通过一些已知分类的邮件输入到这个模型里，根据这些邮件调整这个模型的参数，使其的分类结果P的准确性在实际过程中得到提高。</p>
+<p>当然，这里的数据的形式也是多种多样的，比如在Reinforcement Learning中则是通过定义rewards的方式，使机器在特定policy中，对自身行为进行评判并不断提升（这里的数据则为这个模型在这次表现的action以及其这套actions的结果）。<br>闲话聊多了， 那为什么要运用ML的方式设计模型呢？</p>
+<p>书中的观点整理下来如下，</p>
+<ul>
+<li>Problems for which existing solutions require a lot of hand-tuning or long lists of  rules: one Machine Learning algorithm can often simplify code and perform better.（省事儿，不用设计人员自己进行参数调整）</li>
+<li>Complex problems for which there is  no good solution at all using a traditional approach: the best Machine Learning techniques can find a solution.（光靠主观想，很难设计一个很好又周全的rule）</li>
+<li>Fluctuating environments: a Machine Learning system can adapt to new data.Getting insights about complex problems and large amounts of data. （ML的适应性更强，并且能够get insight）</li>
+</ul>
+<p>总的这样看，ML的作用很明显了。接下来，我们先聊聊，ML这个大家族是怎么进行分类定义的。毕竟解决的问题是多种多样，数据方式也是多种多样的。那么，对应的模型、系统，自然也是。</p>
+<h2 id="2-Types-of-Machine-Learning-Systems"><a href="#2-Types-of-Machine-Learning-Systems" class="headerlink" title="2. Types of Machine Learning Systems"></a>2. Types of Machine Learning Systems</h2><p>在书中，有3种分类的方法（当然，别的分类方式也是有的）：</p>
+<ul>
+<li><p>根据<strong>是否需要人类的supervision</strong>方式分类：<br>  – Supervised Learning<br>  – Unsupervised Learning<br>  – Semisupervised Learning<br>  – Reinforcement Learning</p>
+</li>
+<li><p><strong>训练数据的训练方式</strong>：<br>  – Online learning<br>  – Batch learning</p>
+</li>
+<li><p>根据<strong>模型原理</strong>，即其为简单的进行与已知数据比较还是通过对数据中的patterns学习到一个预测模型：<br>  – Instance-based learning<br>  – Model-based learning</p>
+</li>
+</ul>
+<h3 id="2-1-根据人类的supervision"><a href="#2-1-根据人类的supervision" class="headerlink" title="2.1. 根据人类的supervision"></a>2.1. 根据人类的supervision</h3><h4 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h4><ul>
+<li>In Supervised learning, the training data feed to algorithm includes the Label.</li>
+<li>Task to solve：classification，numeric value(could also used to do the classification–”probability”).</li>
+<li>Most important algorithms（<em>NIB</em>：表示后面的系列将不会总结这个算法）：<br>– K-nearest Neighbors<br>– Linear regression<br>– Logistic Regression<br>– Support Vector Machine(SVMs)<br>– Decision Trees and Random Forests<br>– Neural networks<div align="center"><br><img src="/img/chapter1/ins_spam.png" width="400" hegiht="200" align="center"><br></div>
+
+</li>
+</ul>
+<p>图片里是一个简单的垃圾短信分类系统，这里的Label也就是-&gt;是ham还是spam，其他的例子比如图片分类，人脸识别等等。我个人的理解，这部分就很像你教小孩子，一样事物是什么的，然他的见识的多，自己摸索到套路了（模型的参数），也就会了，成功率也就高了。</p>
+<h4 id="Unsupervised-learning"><a href="#Unsupervised-learning" class="headerlink" title="Unsupervised learning"></a>Unsupervised learning</h4><ul>
+<li>In Unsupervised learning, the training data is Unlabeled.</li>
+<li>Task to solve：Clustering，Visualizaiton and Dimensionality reduction, Association rule learning(NIB).</li>
+<li>Most important algorithms：<ul>
+<li><strong>Clustering</strong>:<br>  – K-Means(NIB)<br>  – Hierarchical cluster Analysis(HCA)(NIB)<br>  – Expectation Maximization(NIB)</li>
+<li><strong>Visualizaiton and Dimensionality reduction</strong>:<br>  – Principal Component Analysis(PCA)<br>  – Kernel PCA<br>  – Locally-linear Embedding(LIE)(NIB)<br>  – T-distributed Stochastic Neighbor Embedding(t-SNE)(NIB)</li>
+<li><strong>Association rule</strong>:<br>  – Apriori(NIB)<br>  – Eclat(NIB)<div align="center"><br><img src="/img/chapter1/unsupervised.png" width="400" hegiht="200" align="center"><br></div>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>这是一个clustering的例子，看到图第一眼想可能到的就是KNN等这种聚类算法。unsupervised learning广泛的被应用到，类似于用户分类，topic detection等等这类大数据提取topic又或clustering的方向（采取人为label的话显然是too expensive啦）。当然，既然它可以clustering，它当然就可以用于检测离群值（比如 anomaly detection）。减维的话有比较常见PCA和他的亲戚们，比较直接就是可以减到2～3维来提供viualization，缩减运算量当然也是重要的一点，当然也有很多功能和clustering是比较重合的。<br>Association rule则是寻找大数据中attributes间的联系（读的论文不多，我还没遇到过这个方向的实例）。大概的意思就是，比如，可以通过人们在超市里都买什么，找到买的东西的相应联系，然后下次就可以放一起方便用户购买了。<br>书中对于Unspervised的部分只重点提了PCA相关的算法（减维），个人的理解就是，整本书都是偏向介绍classification 和regression的所以，偏向数据挖掘的算法比如LDA，高斯混合模型等都没有提及。（差点忘了EM，吴老师都说过了，“上帝的算法”）所以这部分的坑就准备在DL前开一章的坑来讲。（日常画饼，哎）</p>
+<h4 id="Semisupervised-learning"><a href="#Semisupervised-learning" class="headerlink" title="Semisupervised learning"></a>Semisupervised learning</h4><ul>
+<li>In Semisupervised learning, the training data are partially labeled.</li>
+<li>Task to solve：Google photos(upload all famliy photos, label several of them, and learner labels all of them)</li>
+<li>Combinations of unsupervised learning and supervised algorithms.</li>
+</ul>
+<p>大部分Semisupervised learning都融合了前面的两种学习系统，书中举了一个比较明显的例子google photos，其实我个人的观点，这个例子不是很好，因为严格意义上来讲，Semisupervised learning是不包含人为干预的，这里则更倾向于active learning。</p>
+<p><em>来点画外音</em> 按照wiki上来讲，active learning其实是Semi learning的一个小弟。在wiki上把他分到了semisupervised learning里了。我自己的观点稍有不同，主动学习的主要思想是：</p>
+<ul>
+<li>实际上，大部分的数据都是为未标记的，那么，从未标记数据中，给用户（又或expert）提一个query example来标记，使得用这个example训练后的收益最大化（甚至可以得到媲美和训练很多其他标记数据的结果）。（个人解释，非官方）</li>
+</ul>
+<p>从整体定义上来看，这个学习方式严格意义上来看，个人觉的不可以完全划分到Semisupervised learning的小弟行列，因为他是需要interaction的。<br>当然以上都是个人的观点，我自己感觉，定义这个东西吧，大概理解就ok。有这空，还是把钻牛角尖的时间，去推推公式更好点。</p>
+<h4 id="Reinforcement-learning"><a href="#Reinforcement-learning" class="headerlink" title="Reinforcement learning"></a>Reinforcement learning</h4><p>In Reinforcement learning,  the system called an agent, can observe the environment, select and perform actions, and get rewards in return(or penalties in the form of negative rewards).</p>
+<div align="center"><br><img src="/img/chapter1/reiforcement.png" width="400" hegiht="200" align="center"><br></div>
+
+<p>这种方式很有趣，像我前面提到的，他通过制定相关的policy来给模型reward然后去学习，我个人的感觉，这是一个非常有潜力的学习类型，毕竟这才是自学习的精髓，重点是怎么来规定这个policy和reward，现在大部分的运用包括一些模型走路的学习训练（游戏里比较常见），又或者著名的AlphaGo。不出意外，可能这部分的详细整理会出现在Deep learning章的最后一部分，就当是压个轴吧（当然，不出意外的话，哭了）。</p>
+<h3 id="2-2-根据输入数据是fed-by-batch还是online"><a href="#2-2-根据输入数据是fed-by-batch还是online" class="headerlink" title="2.2. 根据输入数据是fed by batch还是online"></a>2.2. 根据输入数据是fed by batch还是online</h3><h4 id="Batch-learning-offline-learning"><a href="#Batch-learning-offline-learning" class="headerlink" title="Batch learning(offline learning)"></a>Batch learning(offline learning)</h4><ul>
+<li>In Batch learning, it must be trained using all the available data.</li>
+</ul>
+<p>这个例子很好说，比如ImageNet比赛中的各种CNN网络～一股脑的训练好去搞定接下来的问题吧。<br>这个方式的弊端也很容易理解，需要足够的数据，再者，再训练的成本比较高（updating）。</p>
+<h4 id="Online-learning"><a href="#Online-learning" class="headerlink" title="Online learning"></a>Online learning</h4><ul>
+<li>In Online learning, you train the system incrementally by feeding it data instances sequentially or small groups(mini-batch). The system can learn about new data on the fly.</li>
+<li><em>Attentions</em> :<ul>
+<li>Learning rate: how fast they should adapt to changing data.<br>  – High: learn fast quickly forget the old data, easily influenced by noise.<br>  – Low: learn slow, have more inertia(惯性), less sensitive to noise.</li>
+<li>If bad data is fed to the system: the system’s performance will gradually decline.<br>  – To avoid: monitor your system closely and promptly switch learning off if detect a drop in performance.<div align="center"><br><img src="/img/chapter1/oline.png" width="400" hegiht="200" align="center"><br></div>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>这张图是一个简单的Online learning的结构，对比上面的batch learning就可以了，可以incrementally的学习。可以随用随学，很理想。但是缺点也很明显，如上<em>Attentions</em>。</p>
+<h3 id="2-3-根据模型的工作方式-instance-model-based"><a href="#2-3-根据模型的工作方式-instance-model-based" class="headerlink" title="2.3. 根据模型的工作方式 instance/model based"></a>2.3. 根据模型的工作方式 instance/model based</h3><h4 id="Instance-based-learning"><a href="#Instance-based-learning" class="headerlink" title="Instance-based learning"></a>Instance-based learning</h4><ul>
+<li>In  instance-based learning: the system learns the examples by heart, then generalizes to new cases using a similarity measure.<div align="center"><br><img src="/img/chapter1/Instance.png" width="400" hegiht="200" align="center"><br></div>
+
+</li>
+</ul>
+<p>这部分，我的理解比较粗暴一点。分类的例子，把training data放到数据库，新的数据需要预测，直接和数据库中的例子做比较（这里的比较可以是欧式距离，马式距离等等），找到最优匹配，所以这个方法又称为“胜者为王”法。比较经典的算法，比如KNN。</p>
+<h4 id="Model-based-learning"><a href="#Model-based-learning" class="headerlink" title="Model-based learning"></a>Model-based learning</h4><ul>
+<li>In  Model-based learning: the generalize from a set of examples is to build a model of these examples, the use that model to make predictions.</li>
+<li>Summary:<ul>
+<li>Studied the data</li>
+<li>Selected a model</li>
+<li>Trained it on the training data(minimizing a cost function)</li>
+<li>Apply the model for prediction<div align="center"><br><img src="/img/chapter1/Model.png" width="400" hegiht="200" align="center"><br></div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-ML中会遇得到种种问题"><a href="#3-ML中会遇得到种种问题" class="headerlink" title="3. ML中会遇得到种种问题"></a>3. ML中会遇得到种种问题</h2><h3 id="3-1-Insufficient-Quantity-of-Training-Data"><a href="#3-1-Insufficient-Quantity-of-Training-Data" class="headerlink" title="3.1. Insufficient Quantity of Training Data"></a>3.1. Insufficient Quantity of Training Data</h3><p>Machine Learning needs enough data for training, even though a simple problems the system needs typically thousands of examples.</p>
+<h3 id="3-2-Non-representative-Training-Data"><a href="#3-2-Non-representative-Training-Data" class="headerlink" title="3.2. Non-representative Training Data"></a>3.2. Non-representative Training Data</h3><p>If the sample is too small, there will be more sampling noise.</p>
+<h3 id="3-3-Poor-Quality-Training-Data"><a href="#3-3-Poor-Quality-Training-Data" class="headerlink" title="3.3. Poor-Quality Training Data"></a>3.3. Poor-Quality Training Data</h3><p>Samples are full of errors, outliers, and noise.</p>
+<h3 id="3-4-Irrelevant-Features"><a href="#3-4-Irrelevant-Features" class="headerlink" title="3.4. Irrelevant Features"></a>3.4. Irrelevant Features</h3><p><em>Solution</em> :</p>
+<ul>
+<li>Features selection: selecting the most useful features to train on among existing features.</li>
+<li>Feature extraction: combining existing features to produce a more useful one.</li>
+<li>Creating new features by gathering new data.</li>
+</ul>
+<p>个人觉得，其中Feature extraction的思想很重要，无论是模型前的数据预处理，还是模型里的kernel去解决非线性问题（比如SVM）。</p>
+<h3 id="3-5-Overfitting-training-data"><a href="#3-5-Overfitting-training-data" class="headerlink" title="3.5. Overfitting training data"></a>3.5. Overfitting training data</h3><p><em>Solution</em> :</p>
+<ul>
+<li>To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constraining the model.</li>
+<li>To gather more training data</li>
+<li>To reduce the noise in the training data</li>
+</ul>
+<p>Overfitting这个问题很经典，也成为了之前Deep learning得到飞速发展前的一道深坎。简单的说就是，参数量太大了，导致训练中每个数据的特点都被模型用各个参数重点关注了（谁让咱手下多呢）。比如这张图，</p>
+<div align="center"><br><img src="https://upload-images.jianshu.io/upload_images/1207849-56df4ac9042948fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" width="400" hegiht="200" align="center"><br></div>
+
+<p>可以看出第二个模型就比较满足我们的需要（较为符合实际），虽然有1个点不是很理想。但是第三个图，显然就是用力过猛了（不太符合实际规律一般）。这里的给的解决方法比较笼统，具体在模型里可以有Regularization（例如l1，l2等），又或增加更大的随机性等等（后面根据具体算法具体来讲）。</p>
+<h3 id="3-6-Underfitting-the-training-Data"><a href="#3-6-Underfitting-the-training-Data" class="headerlink" title="3.6. Underfitting the training Data"></a>3.6. Underfitting the training Data</h3><p><em>Solution</em> :</p>
+<ul>
+<li>Selecting a more powerful model.</li>
+<li>Feeding better features to the learning algorithm.</li>
+<li>Reducing the constraints on the model.</li>
+</ul>
+<p>这种方法说白了就是这个模型水平不行，搞不定这个case，去叫个大哥（more powerful models）或者给更多对应的工具（features）。<br>当然，根据上个问题也可能就是overfitting的问题修过度了。</p>
+<h2 id="4-Testing-amp-Validating"><a href="#4-Testing-amp-Validating" class="headerlink" title="4. Testing &amp;Validating"></a>4. Testing &amp;Validating</h2><p>（T：测试这个模型实际中不中，V：调整一下模型里的固有Hyperparameters）</p>
+<ul>
+<li>3 parts:<ul>
+<li>Training set: A set of examples for learning fit the parameters.</li>
+<li>Validation set: A set of examples for tuning the hyperparameters.</li>
+<li>Testing set: A set of examples only to access the performance</li>
+</ul>
+</li>
+<li>Error rate: generalization error or out-of-sample error.</li>
+<li>Training/testing set: usually 8:2<br><em>cross-validation</em> : training set is split into complementary subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts.<div align="center"><br><img src="/img/chapter1/crossvalidation.png" width="400" hegiht="200" align="center"><br></div>
+
+</li>
+</ul>
+<p>一般的model都经历这个training-validation-testing的过程（一般testing的数据是一开始就直接拿走的，为了保证没有bias，下一章会重点整理），训练好模型了， 但模型大部分都会有一些Hyperparameters，需要咱自己手动调整。这时就又需要一些数据来帮忙调整它们，也就是validation这一部分。最后用testing部分的数据来对这个模型做评价。<br>问题来了，利用一部分训练数据来单独做validation的话，显然就浪费了这部分的有用信息。这时就有了cross-validation这个概念。<br>如图，就是把training的部分分了几块，分别作为validation数据，然后平均一哈作为validation的结果。最后调整好Hyperparameters再总的来training。这个方法经常被用在例如gridsearchCV这种寻找好的Hyperparameters的方法里。</p>
+<h2 id="5-唠叨一下"><a href="#5-唠叨一下" class="headerlink" title="5. 唠叨一下"></a>5. 唠叨一下</h2><p>到这里，这一章就结束了，这里分享一些我自己的一些小想法：<br>一个ML系统能否成功基本可以分为3个大部分，</p>
+<ul>
+<li>第一部分是数据，这个部分决定了模型最后能否真的投入应用，功能就算不强的模型，数据充足的话，它的实施性也是可以得到一定的保障的。（实施性）</li>
+<li>第二部分是模型本身，这个部分相对的决定了这个系统的上限，足够的数据，更好的模型，就意味着更高的准确性（上限性）</li>
+<li>最后的一部分则是硬件，Deep learning能够得到飞速发展的另一个原因也就是硬件上计算能力的进步，加上分布式计算的充分发展，都是系统得到实现的基础。（保证性）</li>
+</ul>
+<p>好啦，大概念的内容就这里截止了，下一章就是运用一个完整的分类项目来介绍一些机器学习中的基本技巧和概念。</p>
+<p>画饼复习路艰难，越学越慢，那就慢慢走吧。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529322594639&di=e1f9a8795737706f0cffb9503d28fe71&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ffaf2b2119313b07e86f96a4807d7912397dd8c2d.jpg" width="200" hegiht="100" align="center"></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 来必力 -->
+<div id="livere-comment">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzEyMi8xMzY1OA==">
+	<script type="text/ls-javascript" id="livere-comment-js">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+       if (typeof LivereTower === 'function') { return; }
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+</div>
+</div>
+<style>
+    #livere-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/06/04/myblog/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/bg1.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/selfie5.jpg" alt="eickEe's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        eick2e@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Machine-Learning/">Machine_Learning<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>eickEe
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
