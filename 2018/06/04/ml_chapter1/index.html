@@ -47,7 +47,7 @@
     
     <title>
         
-            第二章 一个 “End to End Project” 的例子 | 
+            第一章 Machine Learning基础 | 
         
         eickEe
     </title>
@@ -58,7 +58,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",数据预处理,Machine Learning,分类和回归基础">
+    <meta name="keywords" content=",Machine Learning,基础概念,ML分类">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -224,7 +224,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="eickEe">
-    <meta name="msapplication-starturl" content="http://eickee.com/2018/06/22/ml-chapter2/">
+    <meta name="msapplication-starturl" content="http://eickee.com/2018/06/04/ml_chapter1/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="eickEe">
@@ -239,16 +239,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://eickee.com/2018/06/22/ml-chapter2/">
+    <meta property="og:url" content="http://eickee.com/2018/06/04/ml_chapter1/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="第二章 一个 “End to End Project” 的例子 | eickEe">
+    <meta property="og:title" content="第一章 Machine Learning基础 | eickEe">
     <meta property="og:image" content="/img/titt.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="数据预处理"> <meta property="og:article:tag" content="Machine Learning"> <meta property="og:article:tag" content="分类和回归基础"> 
+    <meta property="og:article:tag" content="Machine Learning"> <meta property="og:article:tag" content="基础概念"> <meta property="og:article:tag" content="ML分类"> 
 
     
-        <meta property="article:published_time" content="Fri Jun 22 2018 15:54:50 GMT+0900">
-        <meta property="article:modified_time" content="Tue Jul 03 2018 18:36:55 GMT+0900">
+        <meta property="article:published_time" content="Mon Jun 04 2018 20:03:56 GMT+0900">
+        <meta property="article:modified_time" content="Mon Jul 09 2018 10:51:45 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -256,7 +256,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://eickee.com/2018/06/22/ml-chapter2/index.html" />
+        <link rel="canonical" href="http://eickee.com/2018/06/04/ml_chapter1/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -268,10 +268,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://eickee.com/2018/06/22/ml-chapter2/index.html",
-    "headline": "第二章 一个 “End to End Project” 的例子",
-    "datePublished": "Fri Jun 22 2018 15:54:50 GMT+0900",
-    "dateModified": "Tue Jul 03 2018 18:36:55 GMT+0900",
+    "mainEntityOfPage": "http://eickee.com/2018/06/04/ml_chapter1/index.html",
+    "headline": "第一章 Machine Learning基础",
+    "datePublished": "Mon Jun 04 2018 20:03:56 GMT+0900",
+    "dateModified": "Mon Jul 09 2018 10:51:45 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "eickEe",
@@ -289,7 +289,7 @@
             "url": "/img/titt.png"
         }
     },
-    "keywords": ",数据预处理,Machine Learning,分类和回归基础",
+    "keywords": ",Machine Learning,基础概念,ML分类",
     "description": "",
 }
 </script>
@@ -355,7 +355,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些背景知识"><span class="post-toc-number">1.</span> <span class="post-toc-text">一些背景知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Pipeline"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1. Pipeline</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-RMSE-Root-Mean-Square-Error-MSE-MAE-Mean-Absolute-Error"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2. RMSE(Root Mean Square Error)/MSE/MAE(Mean Absolute Error)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#End-to-End-Project"><span class="post-toc-number">2.</span> <span class="post-toc-text">End to End Project</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Steps-of-Data-Preprocessing"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1. Steps of Data Preprocessing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step-of-the-fetching-out"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Step of the fetching out</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Step-of-the-preparing"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Step of the preparing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Step-of-selecting-and-training-a-Model"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2. Step of selecting and training a Model</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Step-of-evaluation"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3. Step of evaluation</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Definition-amp-Why"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Definition &amp;Why</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-Types-of-Machine-Learning-Systems"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. Types of Machine Learning Systems</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-根据人类的supervision"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1. 根据人类的supervision</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Supervised-Learning"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Supervised Learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Unsupervised-learning"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Unsupervised learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Semisupervised-learning"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">Semisupervised learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Reinforcement-learning"><span class="post-toc-number">2.1.4.</span> <span class="post-toc-text">Reinforcement learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-根据输入数据是fed-by-batch还是online"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2. 根据输入数据是fed by batch还是online</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Batch-learning-offline-learning"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">Batch learning(offline learning)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Online-learning"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">Online learning</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-根据模型的工作方式-instance-model-based"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3. 根据模型的工作方式 instance/model based</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Instance-based-learning"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">Instance-based learning</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Model-based-learning"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">Model-based learning</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-ML中会遇得到种种问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. ML中会遇得到种种问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-Insufficient-Quantity-of-Training-Data"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1. Insufficient Quantity of Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-Non-representative-Training-Data"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2. Non-representative Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-Poor-Quality-Training-Data"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.3. Poor-Quality Training Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-Irrelevant-Features"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">3.4. Irrelevant Features</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-Overfitting-training-data"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">3.5. Overfitting training data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-Underfitting-the-training-Data"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">3.6. Underfitting the training Data</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Testing-amp-Validating"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. Testing &amp;Validating</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-唠叨一下"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 唠叨一下</span></a></li></ol>
     </ul>
     
 
@@ -375,10 +375,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/chapter2/post2.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/chapter1/post1.jpg)">
     
             <p class="article-headline-p">
-                第二章 一个 “End to End Project” 的例子
+                第一章 Machine Learning基础
             </p>
         </div>
 
@@ -397,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>eickEe</strong>
-        <span>6月 22, 2018</span>
+        <span>6月 04, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -421,7 +421,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/分类和回归基础/">分类和回归基础</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/数据预处理/">数据预处理</a>
+        <a class="post_tag-link" href="/tags/ML分类/">ML分类</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/基础概念/">基础概念</a>
     </ul>
     
 
@@ -449,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=第二章 一个 “End to End Project” 的例子&url=http://eickee.com/2018/06/22/ml-chapter2/index.html&pic=http://eickee.com/img/titt.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=第一章 Machine Learning基础&url=http://eickee.com/2018/06/04/ml_chapter1/index.html&pic=http://eickee.com/img/titt.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=第二章 一个 “End to End Project” 的例子&url=http://eickee.com/2018/06/22/ml-chapter2/index.html&via=eickEe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=第一章 Machine Learning基础&url=http://eickee.com/2018/06/04/ml_chapter1/index.html&via=eickEe" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -467,7 +467,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://eickee.com/2018/06/22/ml-chapter2/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://eickee.com/2018/06/04/ml_chapter1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -476,7 +476,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://eickee.com/2018/06/22/ml-chapter2/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://eickee.com/2018/06/04/ml_chapter1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -501,334 +501,149 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>这一章的内容我将书中的第二章和第三章的内容进行了整合（原为一个预测房价的的例子（回归）和识别图中手写数字的例子（分类））。<br>代码部分则为通用版本，主要为使用方法，需要具体问题具体使用。整个一章的内容包含数据预处理，使用模型训练和模型调超参和预测，以及模型评估。</p>
-<p>编程部分选用python3（实际上对于编程水平没有过多的要求），以及pandas，numpy，sklearn等库，这里就不说怎么配置配置环境了（pip很快就搞定了）。书中推荐了Jupyter作为workspace（毕竟是赞助），实测还是可以，配置简单。不过这个东西大家就仁者见仁了, 用自己喜欢的就好.</p>
-<p>这章结束后，推荐可以做一些kaggle里比较基础的比赛来走走流程，比如Titanic那个通过乘客信息预测是否丧生的项目。<a href="https://www.kaggle.com/c/titanic" target="_blank" rel="noopener">https://www.kaggle.com/c/titanic</a></p>
-<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
-<h2 id="一些背景知识"><a href="#一些背景知识" class="headerlink" title="一些背景知识"></a>一些背景知识</h2><h3 id="1-Pipeline"><a href="#1-Pipeline" class="headerlink" title="1. Pipeline"></a>1. Pipeline</h3><p>Pipeline is a sequence of data processing components which there is a lot of data to manipulate and many data transformations.(Asynchronously)</p>
-<p>概念上讲Pipeline：将一个重复做的事情分为几个阶段，每个阶段由不同单元完成（例如，预处理（可包含多个阶段），训练等），所有执行对象（training data），排好队一次进入服务，除了开始和结尾一段时间，任何时刻各个单元都在同时工作。</p>
-<div align="center"><br><img src="/img/chapter2/pipline.png" width="400" hegiht="200" align="center"><br><br><br></div>
+        <p>哎，打脸了，第一篇就拖了一个星期，结果数据挖掘好像考的也不咋地，哭一会儿。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529322415583&di=c3f54b957d9f3161cc3adef03d59ba70&imgtype=0&src=http%3A%2F%2Fgfs12.gomein.net.cn%2FL1y9VgB7AT1RCvBVdK.gif" width="200" hegiht="100" align="center"><br>进入正题。</p>
+<p>AI是近些年最火热的话题之一，而Machine Learning则在整个AI领域中占据着举足轻重的地位（尤其Deep Learning得到了飞跃发展的今天）。抛开大家在游戏（比如最近大红的底特律）又或影视中看到的非常概念性的AI产品（西部世界等），就近来看，Machine Learning在现在的科技产品中也扮演着越来越重要的角色，比如人脸识别，比如推荐系统等等。就我个人的想法，当这些特别的个体部分得到充分性的整合后，得到的必然将是颠覆性的产品概念（例如，已经步步走向成熟的智能驾驶系统）。<br>这一章，主要内容包括Machine Learning的定义，分类等大的概念，以及一些我对机器学习这方面自己的理解。（接下来统称ML）</p>
+<h2 id="1-Definition-amp-Why"><a href="#1-Definition-amp-Why" class="headerlink" title="1. Definition &amp;Why"></a>1. Definition &amp;Why</h2><p>书中引用的是Tom Mitchell（1997）对ML的定义：</p>
+<p><em>A computer program is said ot learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E.</em></p>
+<div align="center"><br><img src="/img/chapter1/ML_struc.png" width="400" hegiht="200" align="center"><br></div>
 
-
-<h3 id="2-RMSE-Root-Mean-Square-Error-MSE-MAE-Mean-Absolute-Error"><a href="#2-RMSE-Root-Mean-Square-Error-MSE-MAE-Mean-Absolute-Error" class="headerlink" title="2. RMSE(Root Mean Square Error)/MSE/MAE(Mean Absolute Error)"></a>2. RMSE(Root Mean Square Error)/MSE/MAE(Mean Absolute Error)</h3><ul>
-<li><strong>RMSE computes the root of a sum of squares corresponds to the Euclidian norm:</strong>            </li>
-</ul>
-<p>$$MSE=\frac{1}{N}\sum_{t=1}^N {(observed_t-predicted_t)}^2$$<br>$$RMSE=\sqrt{\frac{1}{N}\sum_{t=1}^N {(observed_t-predicted_t)}^2}$$</p>
+<p>一个简单的例子是，我们要做一个垃圾邮件的分类（T）模型，通过这个模型进行分类得到类别（是否为spam）P，我们通过一些已知分类的邮件输入到这个模型里，根据这些邮件调整这个模型的参数，使其的分类结果P的准确性在实际过程中得到提高。</p>
+<p>当然，这里的数据的形式也是多种多样的，比如在Reinforcement Learning中则是通过定义rewards的方式，使机器在特定policy中，对自身行为进行评判并不断提升（这里的数据则为这个模型在这次表现的action以及其这套actions的结果）。<br>闲话聊多了， 那为什么要运用ML的方式设计模型呢？</p>
+<p>书中的观点整理下来如下，</p>
 <ul>
-<li><strong>MAE measures distance between 2 points:</strong>                    </li>
+<li>Problems for which existing solutions require a lot of hand-tuning or long lists of  rules: one Machine Learning algorithm can often simplify code and perform better.（省事儿，不用设计人员自己进行参数调整）</li>
+<li>Complex problems for which there is  no good solution at all using a traditional approach: the best Machine Learning techniques can find a solution.（光靠主观想，很难设计一个很好又周全的rule）</li>
+<li>Fluctuating environments: a Machine Learning system can adapt to new data.Getting insights about complex problems and large amounts of data. （ML的适应性更强，并且能够get insight）</li>
 </ul>
-<p>$$MAE=\frac{1}{N}\sum_{t=1}^N {|observed_t-predicted_t|}$$</p>
-<p>– RMSE is more sensitive to the outliers(for square compute) than the MAE, but when outliers are exponentially rare, RMSE performs well and is generally preferred.</p>
-<p>这一部分一般用作表示结果与实际值的误差（也就是 Performance Measurement），或者可以以此为基础建立cost fucntion用于后面的gradient descent等。（当然构成cost function的计算方式有很多种，不局限于此，例如交叉熵等）</p>
-<h2 id="End-to-End-Project"><a href="#End-to-End-Project" class="headerlink" title="End to End Project"></a>End to End Project</h2><h3 id="1-Steps-of-Data-Preprocessing"><a href="#1-Steps-of-Data-Preprocessing" class="headerlink" title="1. Steps of Data Preprocessing"></a>1. Steps of Data Preprocessing</h3><h4 id="Step-of-the-fetching-out"><a href="#Step-of-the-fetching-out" class="headerlink" title="Step of the fetching out"></a>Step of the fetching out</h4><ol>
-<li><strong>About data fetching out</strong><br>这里提供了通过url直接下载数据的方式，其实手动也是可以，最终目的都是得到csv的数据文件。然后通过pandas库进行数据的读取。  </li>
-</ol>
-<pre><code class="py">import os
-import tarfile
-from six.moves import urllib
-
-def fetch_data (url, path):
-    if not os.path.isdir(path):
-        os.makedirs(path)
-    tgz_path = os.path.join(&quot;datasets&quot;, &quot;housing&quot;)
-    urllib.request.urlretrieve(url, tgz_path)
-    data_tgz = tarfile.open(tgz_path)
-    data_tgz.extractall(path = path)
-    data_tgz.close()
-
-import pandas as pd
-
-def load_data(path):
-    csv_path = os.path.join(path, &quot;data.csv&quot;)
-    return pd.read_csv(csv_path)
-</code></pre>
-<ol start="2">
-<li><strong>Do nothing about the test data for the data snooping bias.(select the algorithm optimistically)</strong><br> 这里预先把testing set拿出防止选择模型和调参期间对最后的testing过程具有偏向性（snooping bias）。</li>
-</ol>
-<pre><code class="py">import numpy as np
-
-def split_train_test(data, ratio):
-    shuffled_indices = np.random.permutation(len(data)) #打乱顺序
-    test_set_size = int(len(data)*ratio)
-    test_indices = shuffled_indices[:test_set_size]
-    train_indices = shuffled_indices[test_set_size:]
-    return data.iloc[train_indices], data.iloc[test_indices] # 读打乱后的index
-</code></pre>
-<ol start="3">
-<li><strong>To generate the test group without any traning data previously used, set identifier to each instance.</strong><br> 比如，，可以给每个instance设置个identifier，然后用hash函数来来分别计算data的identifier来进行分配，保证即使每次刷新data set后，test set 也不会包含之前training过的数据。</li>
-</ol>
-<pre><code class="py">import hashlib
-
-def test_set_check(identifier, ratio, hash):
-    return hash(np.int64(identifier)).digest()[-1]&lt;256*ratio
-
-def split_train_test_by_id(data, ratio, id_columm, hash = hashlib.md5):
-    id = data[id_column]
-    in_test_set = id.apply(lambda id_: test_set_check(id_, ratio, hash))
-    return data.loc[~in_test_set], data.loc[in_test_set]
-
-data_with_id = data.reset_index()
-train_set, test_set = split_train_test_by_id(data, 0.2, &quot;index&quot;, hash = hashlib.md5)
-</code></pre>
-<ol start="4">
-<li><strong>The Sampling Bias (there are original strata in the data fetching step). To do the  stratified sampling,  use the StratifiedShuffleSplit class.</strong><br> 例如，我们要在一个城市通过个人的一些个人信息来预测他的职业，其中一点，要考虑到原有的男女分布，也就是这里的original strata，为了防止分组是破坏了原有的阶层分布，需要按照固定的strata来进行分组。</li>
-</ol>
-<pre><code class="py">import sklearn.model_selection import StratifiedShuffleSplit
-
-split = StratifiedShuffleSplit(n_splits=1, test_size, random_state=42)
-for train_index, test_index in split.split(data, data[&quot;stratified_attribute&quot;])
-    strat_train_set = data.loc(train_index)
-    strat_test_set = data.loc(test_index)
-</code></pre>
-<ol start="5">
-<li><strong>Looking for correlations: Use the corr() to compute the standard correlation coefficient.(close to 0 means no linear correlation)After selecting the machine learning algorithm we can compute the correlation by that algorithm again.</strong><br> 例如我训练了一个简单的决策树，那么在此做correlation比对的时候，可以选择这个训练后的决策树进行相关性分析。因为原corr()只能列出linear correlations.</li>
-</ol>
-<pre><code class="py">corr_martrix = data.corr() #http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html 这是 corr()的文档，可以看到原默认的method有四种。
-&gt;&gt;&gt; corr_matrix[&quot;predict_attribute&quot;].sort_values(ascending =False) #这里通过给出的目标attribute来列出各项和它的相关系数。
-</code></pre>
-<ol start="6">
-<li><strong>Attribute Combination: Create new attribute by the existed ones.</strong><br> 在上一章了提到了这个一部分，产生新的attribute的方法有很多，一些分类器也提供了相关的kernel来帮我们解决了一部分这个问题。但从我个人的经验，如果我们可以找到一种更靠谱的rule去产生更靠谱的attribute（这里可以尝试用前面的corr()方法来暂时验证一下），然后配合不同的kernel可能会得到更好的结果，因为kernel还是主要解决线性不可分的问题。</li>
-</ol>
-<h4 id="Step-of-the-preparing"><a href="#Step-of-the-preparing" class="headerlink" title="Step of the preparing"></a>Step of the preparing</h4><ol>
-<li><strong>Separate the features and the labels and do the copies.</strong><br> 做个备份以防万一～</li>
-<li><strong>Do the fixing for missing features by Imputer class</strong><ul>
-<li>Get rid of the corresponding districts;</li>
-<li>Get rid of the whole attribute;</li>
-<li>Set the values to some value(Zero, the mean or the median, etc.)<br><em>if use the mean value for fixing, remember to save the value for the test dataset.</em><br>这里给了两种方式</li>
-</ul>
-</li>
-</ol>
-<pre><code class="py">#简单直接式，但需要保存下来对应值，方便后面对test进行相同操作
-#option1
-data.dropna(subset=[&quot;fixed_attribute&quot;])
-#option2
-data.drop(&quot;fixed_attribute&quot;, axis=1)
-#option3 用了median，当然也可以mean或zero
-median = housing[&quot;fixed_attribute&quot;].median()
-data[&quot;fixed_attribute&quot;].fillna(median, inplace=True)
-</code></pre>
-<pre><code class="py">#引用Imputer对象，一劳永逸式, 以median为例子
-import sklearn.preprocessing import Imputer
-imputer = Imputer(strategy=&quot;median&quot;)
-#书中用的加利福尼亚房价的例子里包含了text attribute，所以计算中值前需要提前drop掉
-data_numercial = data.drop(&quot;text_attribute&quot;, axis=1)
-imputer.fit(data_numercial)
-&gt;&gt;&gt; data_numercial.median().values
-#这样就可以看到各个特征值中值了
-#接着填坑了
-data_fixed = imputer.transform(data_numercial) #这里的data_fixed是一个Numpy Array
-#我自己的想法，这里用imputer也是方便后面对test set用同一个trained好的imputer对象来填空，就省去自己去保留填补的值这一步骤。
-</code></pre>
-<ol start="3">
-<li><strong>Handling Text and Categorical Attributes with factorize()</strong> </li>
-</ol>
+<p>总的这样看，ML的作用很明显了。接下来，我们先聊聊，ML这个大家族是怎么进行分类定义的。毕竟解决的问题是多种多样，数据方式也是多种多样的。那么，对应的模型、系统，自然也是。</p>
+<h2 id="2-Types-of-Machine-Learning-Systems"><a href="#2-Types-of-Machine-Learning-Systems" class="headerlink" title="2. Types of Machine Learning Systems"></a>2. Types of Machine Learning Systems</h2><p>在书中，有3种分类的方法（当然，别的分类方式也是有的）：</p>
 <ul>
-<li>较简单的factorize的方式（这种方法只是单纯的对应种类编号，不推荐）</li>
-</ul>
-<pre><code class="py">data_cat_encoded, cat = data_cat_attribute.factorize()
-#第一个返回项是对一多个种类进行编号的后的数字化的特征值，第二个返回项是种类
-</code></pre>
-<ul>
-<li>One-hot encoding：<ul>
-<li>Create one binary attribute per category(e.g. [1., 0., 0., 0.7]);</li>
-<li>Zeros will be ignored, only nonzero elements will be stored(use toarray()  to see all)</li>
-<li>这种做法的好处书中没有具体写，我个人的理解可以分为两点：<ul>
-<li>生成一个稀疏矩阵，一些情况下会有助于加速训练速度</li>
-<li>变相的增加了特征值（纬度），一些情况下会有助于后面处理非线性的问题</li>
-</ul>
+<li><p>根据<strong>是否需要人类的supervision</strong>方式分类：<br>  – Supervised Learning<br>  – Unsupervised Learning<br>  – Semisupervised Learning<br>  – Reinforcement Learning</p>
+</li>
+<li><p><strong>训练数据的训练方式</strong>：<br>  – Online learning<br>  – Batch learning</p>
+</li>
+<li><p>根据<strong>模型原理</strong>，即其为简单的进行与已知数据比较还是通过对数据中的patterns学习到一个预测模型：<br>  – Instance-based learning<br>  – Model-based learning</p>
 </li>
 </ul>
-</li>
-</ul>
-<pre><code class="py">#接着上面facterize后的特征值
-from sklearn.preprocessing import OneHotEncoder
-encoder = OneHotEncoder()
-data_cat_1hot = encoder.fit_transform(data_cat_encoded.reshape(-1,1)) #因为这个方法输入必须为2D的array
-#后体面还介绍了用CategoricalEncoder这个对象来直接作1hotencoding，但需要下载advanced版本的sklearn，这里就不多介绍了。
-</code></pre>
-<ol start="4">
-<li><strong>Custom transformers: Design the custom transformer class for future use.</strong><br>这里就是把之前的一些处理方式做了一个custom class</li>
-<li><strong>Feature Scaling:</strong> <ul>
-<li>Normalization: effected by the min and max values, rescale the values into 0~1(easily effected by the outliers)</li>
-<li>Standardization (less effects by outliers):<br>  1) Subtract the mean value;<br>  2) Divided by variance (results will hold the unit variance);</li>
-<li>Scaling会造成很多问题，比如，会直接影响一些对scaling比较敏感的model的性能（比如SVM），对于Normalization的方法可以调用sklearn中的MinMaxScaler，Standardization则使用StandardScaler。</li>
-</ul>
-</li>
-</ol>
-<pre><code class="py">#Normalization
-import sklearn.preprocessing import MinMaxScaler
-minmax = MinMaxScaler()
-minmax.fit_transform(data[&quot;scale_attribute&quot;])
-</code></pre>
-<pre><code class="py">#Standardization
-import sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-scaler.fit(data[&quot;scale_attribute&quot;])
-scaler.transform(data[&quot;scale_attribute&quot;])
-#两种方法后面都可以直接调用相应对象来scaling后面的test set
-</code></pre>
-<ol start="6">
-<li><strong>Make transformation pipeline with pipeline class:</strong><ul>
-<li>fit() will calls the fit_transform() sequentially on  all transformers</li>
-<li>Two pipeline could be combined in to a single one by the  FeatureUnion class.</li>
-<li>结合前面的pipline，这里列了一个简单的例子，将预处理的不同步骤结合成一个完整的pipline；</li>
-</ul>
-</li>
-</ol>
-<pre><code class="py">#这里我们会处理的大部分pandas frame的data会包含一些非numercial的特征值，所以这里的做法是先定义了一个numercial特征值的提取器，然后写了两个pipeline分别针对两类特征值，最后在合并这两个pipline。
-#numercial特征提取器，必须包含fit，transform。
-from sklearn.base import BaseEstimator, TransformerMixin
+<h3 id="2-1-根据人类的supervision"><a href="#2-1-根据人类的supervision" class="headerlink" title="2.1. 根据人类的supervision"></a>2.1. 根据人类的supervision</h3><h4 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h4><ul>
+<li>In Supervised learning, the training data feed to algorithm includes the Label.</li>
+<li>Task to solve：classification，numeric value(could also used to do the classification–”probability”).</li>
+<li>Most important algorithms（<em>NIB</em>：表示后面的系列将不会总结这个算法）：<br>– K-nearest Neighbors<br>– Linear regression<br>– Logistic Regression<br>– Support Vector Machine(SVMs)<br>– Decision Trees and Random Forests<br>– Neural networks<div align="center"><br><img src="/img/chapter1/ins_spam.png" width="400" hegiht="200" align="center"><br></div>
 
-#选择器
-class DataFrameSelector(BaseEstimator, TransformerMixin):
-    def __init__(self, attribute_name):
-        self.attribute_names = attribute_names
-    def fit(self,X, y=None):
-        return self
-    def transform(self, X):
-        return X[self.attribute_names].values
+</li>
+</ul>
+<p>图片里是一个简单的垃圾短信分类系统，这里的Label也就是-&gt;是ham还是spam，其他的例子比如图片分类，人脸识别等等。我个人的理解，这部分就很像你教小孩子，一样事物是什么的，然他的见识的多，自己摸索到套路了（模型的参数），也就会了，成功率也就高了。</p>
+<h4 id="Unsupervised-learning"><a href="#Unsupervised-learning" class="headerlink" title="Unsupervised learning"></a>Unsupervised learning</h4><ul>
+<li>In Unsupervised learning, the training data is Unlabeled.</li>
+<li>Task to solve：Clustering，Visualizaiton and Dimensionality reduction, Association rule learning(NIB).</li>
+<li>Most important algorithms：<ul>
+<li><strong>Clustering</strong>:<br>  – K-Means(NIB)<br>  – Hierarchical cluster Analysis(HCA)(NIB)<br>  – Expectation Maximization(NIB)</li>
+<li><strong>Visualizaiton and Dimensionality reduction</strong>:<br>  – Principal Component Analysis(PCA)<br>  – Kernel PCA<br>  – Locally-linear Embedding(LIE)(NIB)<br>  – T-distributed Stochastic Neighbor Embedding(t-SNE)(NIB)</li>
+<li><strong>Association rule</strong>:<br>  – Apriori(NIB)<br>  – Eclat(NIB)<div align="center"><br><img src="/img/chapter1/unsupervised.png" width="400" hegiht="200" align="center"><br></div>
 
-num_attributes = list(data.drop(&quot;text_attribute&quot;,axis=1))
-cat_attributes = [&quot;text_attribute&quot;]
+</li>
+</ul>
+</li>
+</ul>
+<p>这是一个clustering的例子，看到图第一眼想可能到的就是KNN等这种聚类算法。unsupervised learning广泛的被应用到，类似于用户分类，topic detection等等这类大数据提取topic又或clustering的方向（采取人为label的话显然是too expensive啦）。当然，既然它可以clustering，它当然就可以用于检测离群值（比如 anomaly detection）。减维的话有比较常见PCA和他的亲戚们，比较直接就是可以减到2～3维来提供viualization，缩减运算量当然也是重要的一点，当然也有很多功能和clustering是比较重合的。<br>Association rule则是寻找大数据中attributes间的联系（读的论文不多，我还没遇到过这个方向的实例）。大概的意思就是，比如，可以通过人们在超市里都买什么，找到买的东西的相应联系，然后下次就可以放一起方便用户购买了。<br>书中对于Unspervised的部分只重点提了PCA相关的算法（减维），个人的理解就是，整本书都是偏向介绍classification 和regression的所以，偏向数据挖掘的算法比如LDA，高斯混合模型等都没有提及。（差点忘了EM，吴老师都说过了，“上帝的算法”）所以这部分的坑就准备在DL前开一章的坑来讲。（日常画饼，哎）</p>
+<h4 id="Semisupervised-learning"><a href="#Semisupervised-learning" class="headerlink" title="Semisupervised learning"></a>Semisupervised learning</h4><ul>
+<li>In Semisupervised learning, the training data are partially labeled.</li>
+<li>Task to solve：Google photos(upload all famliy photos, label several of them, and learner labels all of them)</li>
+<li>Combinations of unsupervised learning and supervised algorithms.</li>
+</ul>
+<p>大部分Semisupervised learning都融合了前面的两种学习系统，书中举了一个比较明显的例子google photos，其实我个人的观点，这个例子不是很好，因为严格意义上来讲，Semisupervised learning是不包含人为干预的，这里则更倾向于active learning。</p>
+<p><em>来点画外音</em> 按照wiki上来讲，active learning其实是Semi learning的一个小弟。在wiki上把他分到了semisupervised learning里了。我自己的观点稍有不同，主动学习的主要思想是：</p>
+<ul>
+<li>实际上，大部分的数据都是为未标记的，那么，从未标记数据中，给用户（又或expert）提一个query example来标记，使得用这个example训练后的收益最大化（甚至可以得到媲美和训练很多其他标记数据的结果）。（个人解释，非官方）</li>
+</ul>
+<p>从整体定义上来看，这个学习方式严格意义上来看，个人觉的不可以完全划分到Semisupervised learning的小弟行列，因为他是需要interaction的。<br>当然以上都是个人的观点，我自己感觉，定义这个东西吧，大概理解就ok。有这空，还是把钻牛角尖的时间，去推推公式更好点。</p>
+<h4 id="Reinforcement-learning"><a href="#Reinforcement-learning" class="headerlink" title="Reinforcement learning"></a>Reinforcement learning</h4><p>In Reinforcement learning,  the system called an agent, can observe the environment, select and perform actions, and get rewards in return(or penalties in the form of negative rewards).</p>
+<div align="center"><br><img src="/img/chapter1/reiforcement.png" width="400" hegiht="200" align="center"><br></div>
 
-#numercial类的pipline
-num_pipline = Pipline([
-    (&#39;selector&#39;, DataFrameSelector(num_attributes)),
-    (&#39;imputer&#39;, Imputer(stratgy = &quot;median&quot;)),
-    (&#39;std_scaler&#39;, StandardScaler()),
-    ])
+<p>这种方式很有趣，像我前面提到的，他通过制定相关的policy来给模型reward然后去学习，我个人的感觉，这是一个非常有潜力的学习类型，毕竟这才是自学习的精髓，重点是怎么来规定这个policy和reward，现在大部分的运用包括一些模型走路的学习训练（游戏里比较常见），又或者著名的AlphaGo。不出意外，可能这部分的详细整理会出现在Deep learning章的最后一部分，就当是压个轴吧（当然，不出意外的话，哭了）。</p>
+<h3 id="2-2-根据输入数据是fed-by-batch还是online"><a href="#2-2-根据输入数据是fed-by-batch还是online" class="headerlink" title="2.2. 根据输入数据是fed by batch还是online"></a>2.2. 根据输入数据是fed by batch还是online</h3><h4 id="Batch-learning-offline-learning"><a href="#Batch-learning-offline-learning" class="headerlink" title="Batch learning(offline learning)"></a>Batch learning(offline learning)</h4><ul>
+<li>In Batch learning, it must be trained using all the available data.</li>
+</ul>
+<p>这个例子很好说，比如ImageNet比赛中的各种CNN网络～一股脑的训练好去搞定接下来的问题吧。<br>这个方式的弊端也很容易理解，需要足够的数据，再者，再训练的成本比较高（updating）。</p>
+<h4 id="Online-learning"><a href="#Online-learning" class="headerlink" title="Online learning"></a>Online learning</h4><ul>
+<li>In Online learning, you train the system incrementally by feeding it data instances sequentially or small groups(mini-batch). The system can learn about new data on the fly.</li>
+<li><em>Attentions</em> :<ul>
+<li>Learning rate: how fast they should adapt to changing data.<br>  – High: learn fast quickly forget the old data, easily influenced by noise.<br>  – Low: learn slow, have more inertia(惯性), less sensitive to noise.</li>
+<li>If bad data is fed to the system: the system’s performance will gradually decline.<br>  – To avoid: monitor your system closely and promptly switch learning off if detect a drop in performance.<div align="center"><br><img src="/img/chapter1/oline.png" width="400" hegiht="200" align="center"><br></div>
 
-#text类pipline
-cat_pipline = Pipline([
-    (&#39;selector&#39;, DataFrameSelector(cat_attributes)),
-    (&#39;cat_encoder&#39;, CategoricalEncoder(encoding = &quot;onehot-dense&quot;)),
-    ])
+</li>
+</ul>
+</li>
+</ul>
+<p>这张图是一个简单的Online learning的结构，对比上面的batch learning就可以了，可以incrementally的学习。可以随用随学，很理想。但是缺点也很明显，如上<em>Attentions</em>。</p>
+<h3 id="2-3-根据模型的工作方式-instance-model-based"><a href="#2-3-根据模型的工作方式-instance-model-based" class="headerlink" title="2.3. 根据模型的工作方式 instance/model based"></a>2.3. 根据模型的工作方式 instance/model based</h3><h4 id="Instance-based-learning"><a href="#Instance-based-learning" class="headerlink" title="Instance-based learning"></a>Instance-based learning</h4><ul>
+<li>In  instance-based learning: the system learns the examples by heart, then generalizes to new cases using a similarity measure.<div align="center"><br><img src="/img/chapter1/Instance.png" width="400" hegiht="200" align="center"><br></div>
 
-#合并两种pipline
-from sklearn.pipline import FeatureUnion
+</li>
+</ul>
+<p>这部分，我的理解比较粗暴一点。分类的例子，把training data放到数据库，新的数据需要预测，直接和数据库中的例子做比较（这里的比较可以是欧式距离，马式距离等等），找到最优匹配，所以这个方法又称为“胜者为王”法。比较经典的算法，比如KNN。</p>
+<h4 id="Model-based-learning"><a href="#Model-based-learning" class="headerlink" title="Model-based learning"></a>Model-based learning</h4><ul>
+<li>In  Model-based learning: the generalize from a set of examples is to build a model of these examples, the use that model to make predictions.</li>
+<li>Summary:<ul>
+<li>Studied the data</li>
+<li>Selected a model</li>
+<li>Trained it on the training data(minimizing a cost function)</li>
+<li>Apply the model for prediction<div align="center"><br><img src="/img/chapter1/Model.png" width="400" hegiht="200" align="center"><br></div>
 
-full_pipline = FeatureUnion(transformer_list = [
-    (&quot;num_pipline&quot;, num_pipline),
-    (&quot;cat_pipline&quot;, cat_pipline),
-    ])
 
-#运用pipline
-preprocessed_data = full_pipline(data)
-</code></pre>
-<h3 id="2-Step-of-selecting-and-training-a-Model"><a href="#2-Step-of-selecting-and-training-a-Model" class="headerlink" title="2. Step of selecting and training a Model"></a>2. Step of selecting and training a Model</h3><ul>
-<li><strong>Select and train a model.</strong><br>这部分后面章节会详细总结，这里暂时用个随机森林的例子（事实上，用sklearn库的话，model的调用和使用方式都是非常方便的）</li>
+</li>
 </ul>
-<pre><code class="py">from sklearn.ensemble import RandomForestRegressor
-forest_reg = RandomForestRegressor() #调用随机森林模型
-forest_reg.fit(preprocessed_data,labels) #训练模型
-pre = forest_reg.predict(preprocessed_test_data) #通过训练的模型预测test data
-</code></pre>
+</li>
+</ul>
+<h2 id="3-ML中会遇得到种种问题"><a href="#3-ML中会遇得到种种问题" class="headerlink" title="3. ML中会遇得到种种问题"></a>3. ML中会遇得到种种问题</h2><h3 id="3-1-Insufficient-Quantity-of-Training-Data"><a href="#3-1-Insufficient-Quantity-of-Training-Data" class="headerlink" title="3.1. Insufficient Quantity of Training Data"></a>3.1. Insufficient Quantity of Training Data</h3><p>Machine Learning needs enough data for training, even though a simple problems the system needs typically thousands of examples.</p>
+<h3 id="3-2-Non-representative-Training-Data"><a href="#3-2-Non-representative-Training-Data" class="headerlink" title="3.2. Non-representative Training Data"></a>3.2. Non-representative Training Data</h3><p>If the sample is too small, there will be more sampling noise.</p>
+<h3 id="3-3-Poor-Quality-Training-Data"><a href="#3-3-Poor-Quality-Training-Data" class="headerlink" title="3.3. Poor-Quality Training Data"></a>3.3. Poor-Quality Training Data</h3><p>Samples are full of errors, outliers, and noise.</p>
+<h3 id="3-4-Irrelevant-Features"><a href="#3-4-Irrelevant-Features" class="headerlink" title="3.4. Irrelevant Features"></a>3.4. Irrelevant Features</h3><p><em>Solution</em> :</p>
 <ul>
-<li><strong>Evaluation with Cross-Validation</strong><br>运用上一章所说的Cross-Validation的方式来判断模型和起hyperparameters的训练效果，是否需要调整</li>
+<li>Features selection: selecting the most useful features to train on among existing features.</li>
+<li>Feature extraction: combining existing features to produce a more useful one.</li>
+<li>Creating new features by gathering new data.</li>
 </ul>
-<pre><code class="py">from sklearn.model_selection import cross_val_score
+<p>个人觉得，其中Feature extraction的思想很重要，无论是模型前的数据预处理，还是模型里的kernel去解决非线性问题（比如SVM）。</p>
+<h3 id="3-5-Overfitting-training-data"><a href="#3-5-Overfitting-training-data" class="headerlink" title="3.5. Overfitting training data"></a>3.5. Overfitting training data</h3><p><em>Solution</em> :</p>
+<ul>
+<li>To simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data or by constraining the model.</li>
+<li>To gather more training data</li>
+<li>To reduce the noise in the training data</li>
+</ul>
+<p>Overfitting这个问题很经典，也成为了之前Deep learning得到飞速发展前的一道深坎。简单的说就是，参数量太大了，导致训练中每个数据的特点都被模型用各个参数重点关注了（谁让咱手下多呢）。比如这张图，</p>
+<div align="center"><br><img src="https://upload-images.jianshu.io/upload_images/1207849-56df4ac9042948fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" width="400" hegiht="200" align="center"><br></div>
 
-scores = cross_val_score(forest_reg, preprocessed_data, labels, scoring= &quot;neg_mean_squared_error&quot;, cv)#分了10组做cross-validation
-forest_rmse_scores = np.sqrt(-scores)
-#这是一个utility function，这里区别于cost function。因为前面用的是n_MSE所以这里再取负后，就变成这个值越大，这个模型效果越好了
-&gt;&gt;&gt; forest_rmse_scores.mean() #这里用平均值来表示10组validation的结果
-</code></pre>
+<p>可以看出第二个模型就比较满足我们的需要（较为符合实际），虽然有1个点不是很理想。但是第三个图，显然就是用力过猛了（不太符合实际规律一般）。这里的给的解决方法比较笼统，具体在模型里可以有Regularization（例如l1，l2等），又或增加更大的随机性等等（后面根据具体算法具体来讲）。</p>
+<h3 id="3-6-Underfitting-the-training-Data"><a href="#3-6-Underfitting-the-training-Data" class="headerlink" title="3.6. Underfitting the training Data"></a>3.6. Underfitting the training Data</h3><p><em>Solution</em> :</p>
 <ul>
-<li><strong>Fine-Tune Model:</strong> <ul>
-<li>Grid Search: Use GridSearchCV to search the best combination for hyperparameters values(for all possible situation);</li>
-<li>Randomized Search: use RandomizedSearchCV for large search space;<br><em>我们通过上一步，一个一个来尝试不同的的hyperparameter的话就可以慢慢调到最好结果。这里，sklearn给了我们相应的功能，直接调用就可以，参数间会以排列组合的方式遍历或随机组合（非全部）计算，最后返还最好的参数搭配.</em></li>
+<li>Selecting a more powerful model.</li>
+<li>Feeding better features to the learning algorithm.</li>
+<li>Reducing the constraints on the model.</li>
 </ul>
-</li>
-</ul>
-<pre><code class="py">from sklearn.model_selection import GridSearchCV
-param_grid = [
-    {&#39;n_estimators&#39;:[3,10,30], &#39;max_features&#39;:[2,4,6,8]},
-    {&#39;bootstrap&#39;:[False], &#39;n_estimators&#39;:[3,10], &#39;max_features&#39;:[2,3,4]},
-]#输入想试的组合
-forest_reg = RandomForestRegressor()
-grid_search = GridSearchCV(forest_reg, param_grid, cv=5, scoring=&#39;neg_mean_squared_error&#39;)
-grid_search = fit(preprocessed_data, labels)
-&gt;&gt;&gt; grid_search.best_params_
-#随机的组合，则可以调用RandomizedSearchCV, 方式差不多。
-</code></pre>
+<p>这种方法说白了就是这个模型水平不行，搞不定这个case，去叫个大哥（more powerful models）或者给更多对应的工具（features）。<br>当然，根据上个问题也可能就是overfitting的问题修过度了。</p>
+<h2 id="4-Testing-amp-Validating"><a href="#4-Testing-amp-Validating" class="headerlink" title="4. Testing &amp;Validating"></a>4. Testing &amp;Validating</h2><p>（T：测试这个模型实际中不中，V：调整一下模型里的固有Hyperparameters）</p>
 <ul>
-<li><strong>这里选用的是回归类模型，解决的是回归类问题，所以会选用MSE等上述方式做参考来做validation调整超参，对于分类问题，会可以选用accrucay，recall等评价模型表现（下面会具体整理）。<br>除此之外，对于分类问题，模型选择时还会面临输出值为多维或多种分类，即Multi-problem问题</strong></li>
-</ul>
-<ul>
-<li><p><strong>Multi-Problem</strong></p>
-<ul>
-<li><p>Multiclass Classification</p>
-<ul>
-<li>Two ways to change binary classifiers to multiclass classifier system:<ol>
-<li>One-versus-all (OvA): Train 10 binary classifiers, one for each digit. Select class from the class whose classifier output the highest scores;</li>
-<li>One-versus-one (OvO): Train a binary classifier for every pair of digits. Select class who wins the most duels.</li>
-</ol>
-</li>
-<li>How to choose:<ol>
-<li>Algorithms scale poorly with the size of the training set(i.e., SVM) is preferred to OvO. (Training the small size data set is much faster than the large one);</li>
-<li>For most binary classifiers, OvA is preferred.</li>
-</ol>
-</li>
+<li>3 parts:<ul>
+<li>Training set: A set of examples for learning fit the parameters.</li>
+<li>Validation set: A set of examples for tuning the hyperparameters.</li>
+<li>Testing set: A set of examples only to access the performance</li>
 </ul>
 </li>
-<li><p>Multilabel Classification<br>  Output contains multiple classes for each instance. </p>
-</li>
-<li><p>Multioutput Classification<br>  It is simply a generalization of multilabel classification where each label can be multiclass(i.e., it can have more than True or False, Haze removing, etc.).<br><strong>大部分的model都是自带适应功能，不需要特意的去调整model到多分类问题。至于OvA还是OvO的问题，我的理解为，model“小组多练”比“大组少练”快，则用OvO，反之则为OvA（大部分为这种）</strong></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="3-Step-of-evaluation"><a href="#3-Step-of-evaluation" class="headerlink" title="3. Step of evaluation"></a>3. Step of evaluation</h3><ul>
-<li><strong>对于回归问题可以用MSE，RMSE等来反馈test set的结果，对于分类问题则还可以通过Confusion Matrix</strong></li>
-<li><p><strong>Confusion Matrix</strong><br>  Reason: Only use accuracy is generally not the preferred performance measure for classifiers, for skewed datasets (i.e., when some classes are much more frequent than others.)</p>
-<div align="center"><br><img src="/img/chapter2/CM.png" width="800" hegiht="200" align="center"><br></div>
+<li>Error rate: generalization error or out-of-sample error.</li>
+<li>Training/testing set: usually 8:2<br><em>cross-validation</em> : training set is split into complementary subsets, and each model is trained against a different combination of these subsets and validated against the remaining parts.<div align="center"><br><img src="/img/chapter1/crossvalidation.png" width="400" hegiht="200" align="center"><br></div>
 
-<p>  – 初上述原因之外，Confusion Matrix相比accuracy，也更方便用户具体问题具体分析。举个例子，比如要做一个初步的垃圾邮件过滤，但是要保证所有的非垃圾邮件必须通过这个初步过滤器，所以在这时候也就需要看Trure Positive和Condition Positive的值（也就是Recall），也就暂时可以放宽False positive的要求。而Recall和Precision也是比较常用到的两项。</p>
 </li>
-<li><p><strong>Precision/ Recall Tradeoff</strong></p>
+</ul>
+<p>一般的model都经历这个training-validation-testing的过程（一般testing的数据是一开始就直接拿走的，为了保证没有bias，下一章会重点整理），训练好模型了， 但模型大部分都会有一些Hyperparameters，需要咱自己手动调整。这时就又需要一些数据来帮忙调整它们，也就是validation这一部分。最后用testing部分的数据来对这个模型做评价。<br>问题来了，利用一部分训练数据来单独做validation的话，显然就浪费了这部分的有用信息。这时就有了cross-validation这个概念。<br>如图，就是把training的部分分了几块，分别作为validation数据，然后平均一哈作为validation的结果。最后调整好Hyperparameters再总的来training。这个方法经常被用在例如gridsearchCV这种寻找好的Hyperparameters的方法里。</p>
+<h2 id="5-唠叨一下"><a href="#5-唠叨一下" class="headerlink" title="5. 唠叨一下"></a>5. 唠叨一下</h2><p>到这里，这一章就结束了，这里分享一些我自己的一些小想法：<br>一个ML系统能否成功基本可以分为3个大部分，</p>
 <ul>
-<li>Set threshold could correct value of the precision and recall (Use the decision_function()  rather ran predict() method, and use confusion_matrix() to see the result):<br><div align="center"><br><img src="/img/chapter2/rp.png" width="400" hegiht="200" align="center"><br></div><ul>
-<li><font color="#FF3333"><strong>Higher</strong></font> threshold —&gt; <font color="#33CC99"><strong>lower</strong></font> recall  and <font color="#FF3333"><strong>Higher</strong></font> precision;</li>
-<li><font color="#33CC99"><strong>Lower</strong></font> threshold —&gt; <font color="#FF3333"><strong>Higher</strong></font> recall and <font color="#33CC99"><strong>lower</strong></font> precision;<br>– 这里可以通过调整Precision/ Recall的方式来满足具体需求，对比不同模型的效果则可以使用对应模型的ROC图。</li>
+<li>第一部分是数据，这个部分决定了模型最后能否真的投入应用，功能就算不强的模型，数据充足的话，它的实施性也是可以得到一定的保障的。（实施性）</li>
+<li>第二部分是模型本身，这个部分相对的决定了这个系统的上限，足够的数据，更好的模型，就意味着更高的准确性（上限性）</li>
+<li>最后的一部分则是硬件，Deep learning能够得到飞速发展的另一个原因也就是硬件上计算能力的进步，加上分布式计算的充分发展，都是系统得到实现的基础。（保证性）</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p><strong>The ROC Curve</strong></p>
-<ul>
-<li>The ROC plots the true positive rate(recall) against the false positive rate(FPR, is equal to 1 minus the true negative rate(TNR, specificity)). Thus the ROC curve plots sensitivity(recall) versus 1-specificity.<br><div align="center"><br><img src="/img/chapter2/roc.png" width="400" hegiht="200" align="center"><br></div><ul>
-<li>A good classifier stays as far away from the random line(slight solid, B point)</li>
-<li>Choose PR whenever  positive is rare, if care more about the false positive rate use the<br> ROC curve.</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>ROC的有多种理解方式，我这里说一下我的理解方式，随着验证过程，Recall不断增大的同时，false positive对应真实值的比例变化越小（FNR），则模型越为理想。即recall上升速度大于FNR的上升速度越多（可以错略的理解成，做对事情的同时犯错越少），模型的工作效果越好，这也是为什么说ROC可以更多的感受False positive rate的原因。这里大于的程度可以看B（最远点）到随机模型线的距离或面积来比较模型优劣。</li>
-</ul>
-</li>
-<li><p><strong>Conclusion</strong></p>
-<ol>
-<li>Use the cross-validation;</li>
-<li>Select the precision/recall tradeoff that fits your needs;</li>
-<li>Compare various models using ROC or ROC AUC(area under the curve) scores</li>
-</ol>
-</li>
-<li><p><strong>Error Analysis</strong></p>
-<ul>
-<li>Look at the confusion matrix:<br><div align="center"><br><img src="/img/chapter2/cmatrix.png" width="400" hegiht="200" align="center"><br></div><ol>
-<li>Call the confusion_matrix, and use the matshow() function;</li>
-<li>Plot the errors, divide each value in the confusion matrix by the number of mages in the corresponding class, and fill the diagonal with zeros.–&gt; P99.<br><strong>Confusion matrix能带来的一个好处就是可以清楚发现模型在那种类别坐判断时会出现较多的问题，方便对症下药。</strong></li>
-</ol>
-</li>
-<li>Fix the specific errors: <ul>
-<li>Gather more training data for these digits;</li>
-<li>Engineer new features;</li>
-<li>Preprocess the image(more stand out, shifting or rotation, etc.).</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>好啦，大概念的内容就这里截止了，下一章就是运用一个完整的分类项目来介绍一些机器学习中的基本技巧和概念。</p>
+<p>画饼复习路艰难，越学越慢，那就慢慢走吧。<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529322594639&di=e1f9a8795737706f0cffb9503d28fe71&imgtype=0&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Ffaf2b2119313b07e86f96a4807d7912397dd8c2d.jpg" width="200" hegiht="100" align="center"></p>
 
         
     
@@ -871,13 +686,21 @@ grid_search = fit(preprocessed_data, labels)
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2018/06/22/ml-chapter2/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/06/04/ml_chapter1/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/24/myblog/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
