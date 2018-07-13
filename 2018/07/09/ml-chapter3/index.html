@@ -248,7 +248,7 @@
 
     
         <meta property="article:published_time" content="Mon Jul 09 2018 15:54:50 GMT+0900">
-        <meta property="article:modified_time" content="Fri Jul 13 2018 15:02:54 GMT+0900">
+        <meta property="article:modified_time" content="Fri Jul 13 2018 16:46:31 GMT+0900">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "http://eickee.com/2018/07/09/ml-chapter3/index.html",
     "headline": "第三章 Training Model",
     "datePublished": "Mon Jul 09 2018 15:54:50 GMT+0900",
-    "dateModified": "Fri Jul 13 2018 15:02:54 GMT+0900",
+    "dateModified": "Fri Jul 13 2018 16:46:31 GMT+0900",
     "author": {
         "@type": "Person",
         "name": "eickEe",
@@ -521,7 +521,7 @@
 <li>带来了online learning的可行性（原因同2）；</li>
 </ul>
 </li>
-<li>这章主要是针对Linear 和Logistic Gegression来讲述GD的，其他模型的思路大体相同；</li>
+<li>这章主要是针对Linear 和Logistic Regression来讲述GD的，其他模型的思路大体相同；</li>
 <li>基于gradient的方法不止GD一种，也包括高斯牛顿法等，这章就不整理了哈；</li>
 <li>这章将整理几种基础GD的方式，后面针对于Nerual Network的GD的优化（如Adam等）会整理在后面的Deep learning篇里；</li>
 <li>这里同样分享一个大牛的Post，也是专门讲解Gradient Descent的：<a href="http://ruder.io/optimizing-gradient-descent/index.html" target="_blank" rel="noopener">http://ruder.io/optimizing-gradient-descent/index.html</a></li>
@@ -533,8 +533,8 @@
 </ul>
 <p>接下来，详细整理下这个下山的各个环节。</p>
 <h3 id="2-1-Learning-Rate"><a href="#2-1-Learning-Rate" class="headerlink" title="2.1 Learning Rate"></a>2.1 Learning Rate</h3><ul>
-<li>Decide the <strong>size of steps</strong>:<div align="center"><br><img src="/img/chapter3/2.1.1.png" width="400" hegiht="200" align="center"><br></div></li>
-<li><strong>Not all</strong> the cost function look like nice regular bowls. There may be holes, ridges plateaus, etc.<br><div align="center"><br><img src="/img/chapter3/2.1.2.png" width="400" hegiht="200" align="center"><br></div><br>这里就是刚刚提到的步子迈太大或太小以及存在半山腰所带来的问题                </li>
+<li>Decide the <strong>size of steps</strong>:<div align="center"><br><img src="/img/chapter3/2.1.1.png" width="350" hegiht="200" align="center"><br></div></li>
+<li><strong>Not all</strong> the cost function look like nice regular bowls. There may be holes, ridges plateaus, etc.<br><div align="center"><br><img src="/img/chapter3/2.1.2.png" width="350" hegiht="200" align="center"><br></div><br>这里就是刚刚提到的步子迈太大或太小以及存在半山腰所带来的问题                </li>
 <li>Shape of cost function could be an elongated bowl if the features have very <em>different scales</em>:<br><div align="center"><br><img src="/img/chapter3/2.1.3.png" width="400" hegiht="200" align="center"><br></div><br><em>Using Gradient Descent, you should ensure that all features have a <strong>similar scale</strong> by StandardScaler class.</em><br>这里解释了需要做scaling原因，梯度下降都会沿着这一区域下降最快的方向，所以如果出现图1中的情况，显然，每个局部的最佳不代表整体的最佳方向，所以要做scaling。</li>
 </ul>
 <h3 id="2-2-Batch-Gradient-Descent"><a href="#2-2-Batch-Gradient-Descent" class="headerlink" title="2.2 Batch Gradient Descent"></a>2.2 Batch Gradient Descent</h3><ol>
