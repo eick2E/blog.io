@@ -47,7 +47,7 @@
     
     <title>
         
-            关于blog的blablabla | 
+            Part1 Artificial Neural Networks | 
         
         eickEe
     </title>
@@ -58,7 +58,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",hexo,Machine Learning,闲聊">
+    <meta name="keywords" content=",Neural Networks,深度学习">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -224,7 +224,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="eickEe">
-    <meta name="msapplication-starturl" content="http://eickee.com/2018/05/24/myblog/">
+    <meta name="msapplication-starturl" content="http://eickee.com/2018/07/26/dl-chapter1/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="eickEe">
@@ -239,16 +239,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://eickee.com/2018/05/24/myblog/">
+    <meta property="og:url" content="http://eickee.com/2018/07/26/dl-chapter1/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="关于blog的blablabla | eickEe">
+    <meta property="og:title" content="Part1 Artificial Neural Networks | eickEe">
     <meta property="og:image" content="/img/titt.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="hexo"> <meta property="og:article:tag" content="Machine Learning"> <meta property="og:article:tag" content="闲聊"> 
+    <meta property="og:article:tag" content="Neural Networks"> <meta property="og:article:tag" content="深度学习"> 
 
     
-        <meta property="article:published_time" content="Thu May 24 2018 17:01:04 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jul 09 2018 09:51:37 GMT+0800">
+        <meta property="article:published_time" content="Thu Jul 26 2018 15:54:50 GMT+0800">
+        <meta property="article:modified_time" content="Thu Aug 30 2018 17:16:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -256,7 +256,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://eickee.com/2018/05/24/myblog/index.html" />
+        <link rel="canonical" href="http://eickee.com/2018/07/26/dl-chapter1/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -268,10 +268,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://eickee.com/2018/05/24/myblog/index.html",
-    "headline": "关于blog的blablabla",
-    "datePublished": "Thu May 24 2018 17:01:04 GMT+0800",
-    "dateModified": "Mon Jul 09 2018 09:51:37 GMT+0800",
+    "mainEntityOfPage": "http://eickee.com/2018/07/26/dl-chapter1/index.html",
+    "headline": "Part1 Artificial Neural Networks",
+    "datePublished": "Thu Jul 26 2018 15:54:50 GMT+0800",
+    "dateModified": "Thu Aug 30 2018 17:16:58 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "eickEe",
@@ -289,7 +289,7 @@
             "url": "/img/titt.png"
         }
     },
-    "keywords": ",hexo,Machine Learning,闲聊",
+    "keywords": ",Neural Networks,深度学习",
     "description": "",
 }
 </script>
@@ -355,7 +355,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于blog"><span class="post-toc-number">1.</span> <span class="post-toc-text">关于blog</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#BLOG的目的"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">BLOG的目的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于Machine-Learning"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">关于Machine Learning</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于搭建blog"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">关于搭建blog</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Logical-computations-with-Neurons"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Logical computations with Neurons</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-Artificial-Neuron"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.1 Artificial Neuron</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-The-Perceptron"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. The Perceptron</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-Training"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 Training</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-Multi-Layer-Perceptron-and-Backpropagation"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. Multi-Layer Perceptron and Backpropagation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-MLP"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1 MLP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-Backpropagation"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2 Backpropagation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Fine-Tuning-Neural-Network-Hyperparameters"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. Fine-Tuning Neural Network Hyperparameters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-Number-of-hidden-layers"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">4.1 Number of hidden layers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-Number-of-Neurons-per-Hidden-Layer"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">4.2 Number of Neurons per Hidden Layer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-Activation-Functions"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">4.3 Activation Functions</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -375,10 +375,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/postp.jpg)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/DL_1/DL_1.png)">
     
             <p class="article-headline-p">
-                关于blog的blablabla
+                Part1 Artificial Neural Networks
             </p>
         </div>
 
@@ -397,7 +397,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>eickEe</strong>
-        <span>5月 24, 2018</span>
+        <span>7月 26, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -421,7 +421,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Machine-Learning/">Machine Learning</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/hexo/">hexo</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/闲聊/">闲聊</a>
+        <a class="post_tag-link" href="/tags/Neural-Networks/">Neural Networks</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/深度学习/">深度学习</a>
     </ul>
     
 
@@ -449,7 +449,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于blog的blablabla&url=http://eickee.com/2018/05/24/myblog/index.html&pic=http://eickee.com/img/titt.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Part1 Artificial Neural Networks&url=http://eickee.com/2018/07/26/dl-chapter1/index.html&pic=http://eickee.com/img/titt.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -458,7 +458,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于blog的blablabla&url=http://eickee.com/2018/05/24/myblog/index.html&via=eickEe" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Part1 Artificial Neural Networks&url=http://eickee.com/2018/07/26/dl-chapter1/index.html&via=eickEe" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -467,7 +467,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://eickee.com/2018/05/24/myblog/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://eickee.com/2018/07/26/dl-chapter1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -476,7 +476,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://eickee.com/2018/05/24/myblog/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://eickee.com/2018/07/26/dl-chapter1/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -501,24 +501,78 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Hi， 这里是一个来自在CS道路上正在挣扎的码农狗的blog，在拖延症的影响下， （终于*3）用Github Pages把blog搭了。</p>
-<p><strong>鉴于博主是个话唠，欢迎放松心态品尝。</strong></p>
-<h2 id="关于blog"><a href="#关于blog" class="headerlink" title="关于blog"></a>关于blog</h2><h3 id="BLOG的目的"><a href="#BLOG的目的" class="headerlink" title="BLOG的目的"></a>BLOG的目的</h3><p>建这个blog最初目的，也是为了逼迫自己  <strong>周更</strong>  ，9月前复习和整理完之前的笔记。———&gt;&gt;主要还是为了治拖延症<br>如果你对Machine Learning，特别是Deep Learning感兴趣的，欢迎随时来跟我讨论。</p>
-<h3 id="关于Machine-Learning"><a href="#关于Machine-Learning" class="headerlink" title="关于Machine Learning"></a>关于Machine Learning</h3><p>整个的更新的框架，我会直接按照这本书的顺序，一章一章的整理和总结。</p>
-<p>   <strong>V V V</strong></p>
-<p><img src="https://images-eu.ssl-images-amazon.com/images/I/51vPMQ3gJWL.jpg" alt="avatar"></p>
-<p>当然，如果你是ML的初学，我也是非常推荐 <strong>Hands-On Machine Learning with Scikit-Learn &amp; TensorFlow</strong>这本书的，把茫茫的知识点，缕顺的“丝般顺滑”。</p>
-<p>大致的分了两个部分：1.机器学习基础 2.深度学习</p>
+        <p>终于！终于！终于！ 有时间来继续更blog了（开稿日期7.26….）。 最近在实习，之前又在做一个三星的六子棋的比赛，所以….. Fine～MCTS还是很神奇的，有空再发一个单独有关MCTS的文章好了，总结下传说中的Alpha Zero， 传统的机器学习的模型还没有更新完（虽然），但是最近正好复习了深度学习方面的，那…….我就随意交叉着写吧，都是模型方向的，也就不在乎什么顺序了。</p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p><strong>Why ANN could bring much more profound impact on our lives:</strong></p>
 <ul>
-<li>由于笔记中懒惰的我选择了直接搬英文，当然也是怕自己的渣英文强行翻译的话，产生误解，所以主要的躯干我还是会选用英文继续写的.</li>
-<li>除了书中的主要内容的总结，我还会写一点自己的理解和补充内容（如书中未提的EM算法啊，等等），同时也会结合一些自己之前读过的论文和项目做一些小讨论.</li>
-<li>代码部分是基于python3，库的话主要就是sk-learn和tensorflow. </li>
+<li>There is now a huge quantity of data available to train neural networks.</li>
+<li>The tremendous increase in computing power now.</li>
+<li>The training algorithms have been improved.</li>
+<li>Some theoretical limitations of ANNs have turned out to be benign in practice.</li>
 </ul>
-<p>接下来的第一篇文章呢，就是类似于机器学习的简介， 介绍一些机器学习的分类和基本概念。<br><strong>就算下周两门考试，我也要下周一前更，更更更！欢迎监督！！</strong></p>
-<p>……..给自己画了个大饼，但愿别打脸吧,哎……</p>
-<p><img src="http://ww1.rs.fanjian.net/c/9f/dd/4d/039f480b12dd61d8794d2d801c806c36.gif" alt="avatar"></p>
-<p>最后，博主入ML的大坑没多久，所以欢迎大家纠正错误的部分，这也是我想写blog的最重要的部分，慎重的写自己的每一个总结，认真的听每一条指正。</p>
-<h3 id="关于搭建blog"><a href="#关于搭建blog" class="headerlink" title="关于搭建blog"></a>关于搭建blog</h3><p>自己比较懒，也懒得折腾，就选用了比较方便的hexo搭建这个blog，主题则选用了material，如果有朋友在搭建blog上遇到了问题，或者配置文件上遇到问题也可以和我来进行讨论（当然如果我会的话“滑稽”）。<br>*手机端的评论暂不支持微信登陆（…)</p>
+<p>个人的想法，ANN与其他的模型功能上没有太大的差别，处理的任务也是如此，因此可以把神经网络当成一种功能很强大的模型就可以了。只不过其输出结果具有更大的适用性，并且由于其复杂的结构，它针对不一样的任务和目的就衍生出了各具特色的网络类型。比较典型的例如Convolutional Nerual Network（CNN）主要针对图像方向， Recurrent Nerual Network（RNN）则主要针对NLP方向。</p>
+<p>总的来说，神经网络的功能是非常强大和综合的，这也是为什么现在大部分的书中单独把它拿出来作为深度学习（Deep Learning，简称DL）来归类而不是系统性的放到机器学习当中。当然DL也经历了各种各样的问题，但由于上述的4个原因，其在这些年得到了飞速发展。书中从最基础的生物神经网络开始逐渐入题，鉴于本人的拙劣生物知识（虽然大学的专业是生物相关的。。。。），所以我还是直接就从ANN开始了。</p>
+<h2 id="1-Logical-computations-with-Neurons"><a href="#1-Logical-computations-with-Neurons" class="headerlink" title="1. Logical computations with Neurons"></a>1. Logical computations with Neurons</h2><h3 id="1-1-Artificial-Neuron"><a href="#1-1-Artificial-Neuron" class="headerlink" title="1.1 Artificial Neuron"></a>1.1 Artificial Neuron</h3><p>It has one or more binary (on/off) inputs and one binary output, the artificial neuron simply activates its output when more than a certain number of its inputs are active.</p>
+<div align="center"><br><img src="/img/DL_1/1.1.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+<h2 id="2-The-Perceptron"><a href="#2-The-Perceptron" class="headerlink" title="2. The Perceptron"></a>2. The Perceptron</h2><p>The Perceptron is one of the simplest ANN architectures which is based on a slightly different artificial neuron called a linear threshold unit(LTU). Then applies a step function to that sum and outputs the result:</p>
+<div align="center"><br><img src="/img/DL_1/2.1.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+
+<p>Perceptron 是一个非常简单但结构已经很全面的神经网络了，它由多个linear threshold unit(LTU)组成， LTU是由一个线性计算加一个 Artificial Neuron组成（这里用的是Heaviside step）。</p>
+<p>The most common step function used in Perceptron is the Heaviside step function:</p>
+<p>$$ heaviside(z)= \begin{cases}<br>0, &amp; \text {if $z &lt;0$ } \newline<br>1, &amp; \text{if $z \leq 0$ } \end{cases}$$</p>
+<p>$$ sgn(z)= \begin{cases}<br>-1, &amp; \text {if $z &lt; 0$ } \newline<br>0, &amp; \text {if $z = 0$ } \newline<br>+1, &amp; \text{if $z &gt; 0$ } \end{cases}$$</p>
+<p>这个LTU的模型是不是看起来很熟悉？对了，跟之前上一章总结的Logistic Regression模型是不是如出一辙，唯一的区别就是sigmoid 换成了这里的Step函数。<br>所以说，后面用sigmoid 来代替这里Heaviside step函数也就是可以理解的了，原因呢，后面会给出。<br><em>这里引用之前一位大牛的话，简单的看逻辑回归就是一个完整的神经网络结构，一层，一个！</em></p>
+<p>This Perceptron can classify instances simultaneously in to three different binary classes:</p>
+<div align="center"><br><img src="/img/DL_1/2.2.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+<p>再来看Perceptron， 这里可以理解成由3个神经元（LTU）的一层神经网络结构，输出有3位，也就是可以做3分类任务。<br>接下来看一下Perceptron的训练方法。</p>
+<h3 id="2-1-Training"><a href="#2-1-Training" class="headerlink" title="2.1 Training"></a>2.1 Training</h3><p>Hebb’s rule: the connection weight between two neurons is increased whenever they have the same output.    </p>
+<p>$$W_{i,j}^{(next_step)} = w_{i,j}+\eta(\hat{y_j}-y_j)x_i$$</p>
+<p>wi,j is the weights between the ith neurons and jth neurons.</p>
+<p>The decision boundary of each output neuron is linear, so Perceptrons are incapable of learning complex patterns(just like LR). It called the Perceptron convergence theorem.</p>
+<ul>
+<li>这个训练方法我觉得可以理解成梯度下降的简化版本，一样的结构类型，但是更简单的逻辑：同输出就增加，逆输出就减少。</li>
+<li>然而，这里提到了Perceptron一个很致命的问题，就是Perceptron看似很美好，结构清晰逻辑明了，但问题就是，它的适用范围只能处理线性问题。（这也很容易理解，毕竟就是只用了一层线性结构。）但带来的问题就是，它连XOR问题都解决不了，这样肯定和人们之前对它的期望值是非常不对等的，因此，对它抱有的热情也就慢慢无奈的退却了。</li>
+<li>当然，这个问题在Multi-Layer这个概念提出后，就随之消失了。</li>
+</ul>
+<h2 id="3-Multi-Layer-Perceptron-and-Backpropagation"><a href="#3-Multi-Layer-Perceptron-and-Backpropagation" class="headerlink" title="3. Multi-Layer Perceptron and Backpropagation"></a>3. Multi-Layer Perceptron and Backpropagation</h2><h3 id="3-1-MLP"><a href="#3-1-MLP" class="headerlink" title="3.1 MLP"></a>3.1 MLP</h3><p>Stacking multiple Perceptrons could solve the XOR problem which is called a Multi-layer Perceptron(MLP):</p>
+<div align="center"><br><img src="/img/DL_1/3.1.1.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+<p>An MLP is composed of one (passthrough) input layer, one or more layers of LTUs.When an ANN has 2 or more hidden layers, it is called a deep neural network(DNN).</p>
+<div align="center"><br><img src="/img/DL_1/3.1.2.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+<p>简单的看可以是吧两个Perceptron叠起来，这里就是机器学习中stacking的概念（本来是会在基础机器学习最后一章中提出的）。这样就增加了模型的非线性，可以轻松的搞定XOR问题了。然后看一看，这个多层的Perceptron“s”要怎么训练呢？</p>
+<h3 id="3-2-Backpropagation"><a href="#3-2-Backpropagation" class="headerlink" title="3.2 Backpropagation"></a>3.2 Backpropagation</h3><p>Backpropagation could be described as Gradient Descent using reverse-mode autodiff.</p>
+<p>与之前传统的Perceptron相比，这里的训练方法就“升级”了。用了之前说的“GD”的概念。这个GD除了会作曲唱歌，还可以轻松搞定模型最优化的问题。但是，对于这个多层叠加的模型，就需要解决两个大方向上的问题：各层中导数如何求取和连续可导的问题。</p>
+<p>Autodiff<br>    a. Firstly, makes a prediction (forward pass), measures the error,<br>    b. Then goes through each layer in reverse to measure the error contribution from each connection,<br>    c. Finally, slightly tweaks the connection weights to reduce the error(Gradient Descent Step).</p>
+<p>For providing the gradient they replaced the step function with the logistic function. Cause the original step function only contains the flat segments.</p>
+<p>关于求取各层中导数的问题，这里用了一个reverse版本的autodiff的方法，也就是配合用了dual number的方法，这个后面我会单独写一小章介绍的，暂时可以理解为，正反算一遍，导数都清楚，不需要特别去算每层的导数表达式来算梯度。</p>
+<p>Other activation functions:<br>The hyperbolic tangent function tanh(z):<br>    S-shaped, continuous, and differentiable. But output value ranges from -1 to 1(instead of 0 to 1 in the case of the logistic function), which tends to make each layer’s output more or less normalized for speeding up convergence.<br>The ReLU function:<br>    f(z) = max(0,z). It is continuous but not differentiable at z=0. However it works well and fast to compute.</p>
+<div align="center"><br><img src="/img/DL_1/3.2.png" width="400" hegiht="200" align="center"><br><br><br></div>
+
+<p>The output layer is typically modified by replacing  the individual activation functions by a shared softmax function.( Most for classification)</p>
+<p>关于连续可导问题，这里如果使用原来的step函数显然没有意义的，毕竟这个梯度几乎就找不到，所以这里提供了很多中别的actiavtion函数，首先就是之前说的sigmoid，也包含tanh和比较火的Relu。当然下一章优化模型中，会提到更多版本的变种actiavtion函数，用于解决之前老版本中遇到的各种各样的问题。</p>
+<h2 id="4-Fine-Tuning-Neural-Network-Hyperparameters"><a href="#4-Fine-Tuning-Neural-Network-Hyperparameters" class="headerlink" title="4. Fine-Tuning Neural Network Hyperparameters"></a>4. Fine-Tuning Neural Network Hyperparameters</h2><h3 id="4-1-Number-of-hidden-layers"><a href="#4-1-Number-of-hidden-layers" class="headerlink" title="4.1 Number of hidden layers"></a>4.1 Number of hidden layers</h3><ul>
+<li>Deep networks have a much higher parameter efficiency than shallow ones: they can model complex functions using exponentially fewer neurons than shallow nets, making them much faster to train.(Deep &gt; Shallow)</li>
+<li>Lower hidden layers model low-level structures(e.g., line segments of various shapes and orientations), intermediate hidden layers combine these low-level structures to model intermediate-level structures (e.g., squares, circles), and the highest hidden layers and the output layer combine these intermediate structures to model high-level structures(e.g., face).</li>
+<li>Kickstart training by reusing the lower layers of the first network is possible and effective.</li>
+</ul>
+<ul>
+<li>Start with just one or two hidden layers and it will work just fine. For complex problems, gradually ramp up the number of hidden layers, until you start overfitting the training set.</li>
+<li>However reusing parts of a pretrained state-of-art network that performs a similar task. Training will be a lot faster and require much less data.</li>
+</ul>
+<h3 id="4-2-Number-of-Neurons-per-Hidden-Layer"><a href="#4-2-Number-of-Neurons-per-Hidden-Layer" class="headerlink" title="4.2 Number of Neurons per Hidden Layer"></a>4.2 Number of Neurons per Hidden Layer</h3><ul>
+<li>Still somewhat black art( as common, the form of a funnel or all the same);</li>
+<li>A simpler approach is to pick a model with more layers and neurons than you actually need, then use early stopping to prevent it from overfitting. Just like “stretch pants” approach: just use large stretch pants that will shrink down to the right size.</li>
+</ul>
+<h3 id="4-3-Activation-Functions"><a href="#4-3-Activation-Functions" class="headerlink" title="4.3 Activation Functions"></a>4.3 Activation Functions</h3><ul>
+<li>Using the ReLU activation function in the hidden layers;</li>
+<li>For output layer Softmax is preferred or no activation function at all for regression tasks</li>
+</ul>
+<p>这一章主要属于简介和整理，这里稍微的解释了一些深度和宽度的问题和经验，从为什么到用多少。下一章中会从头到尾的整理深层神经网络的参数调整，用什么样的方法，怎样通过调整去解决过拟合、梯度消失或梯度爆炸等问题。<br>不出意外下一章的内容会非常非常长……..</p>
 
         
     
@@ -561,19 +615,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/04/ml_chapter1/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/07/09/ml-chapter3/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
